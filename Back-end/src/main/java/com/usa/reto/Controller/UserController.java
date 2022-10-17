@@ -1,3 +1,4 @@
+
 package com.usa.reto.Controller;
 
 import java.util.Collections;
@@ -14,7 +15,8 @@ public class UserController {
     @GetMapping("/user")
     public Map<String, String> user(@AuthenticationPrincipal OAuth2User principal) {
         System.out.println(principal);
-        Map<String, String> map = Collections.singletonMap("name", principal.getAttribute("login"));
+        Map<String, String> map = Collections.singletonMap("name",
+                principal.getAttribute("login"));
         return map;
     }
 
