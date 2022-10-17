@@ -56,8 +56,7 @@ public class ControllerCar {
     }
 
     @DeleteMapping("/all")
-    public List<Car> deleteAll() {
-        service.deleteAll();
-        return service.getAll();
+    public boolean deleteAll() {
+        return service.deleteAll();
     }
 }
