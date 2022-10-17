@@ -13,7 +13,7 @@ switch(accion){
 function traerInformaciongama(){
     $.ajax({
         
-        url:"http://localhost:8080/api/Gama/all",
+        url:"http://129.146.18.141:8080/api/Gama/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -53,7 +53,7 @@ function guardarInformaciongama(){
     $.ajax (
         {
 
-            url          : 'http://localhost:8080/api/Gama/save',
+            url          : 'http://129.146.18.141:8080/api/Gama/save',
             type         : 'POST',
             data         :  dataToSend,
             datatype     :  "JSON",
@@ -77,7 +77,7 @@ function editarInformaciongama() {
     $.ajax (
                 {
 
-                    url          : 'http://localhost:8080/api/Gama/update',
+                    url          : 'http://129.146.18.141:8080/api/Gama/update',
                     type         : 'PUT',
                     data         :  dataToSend,
                     datatype     :  "JSON",
@@ -102,7 +102,7 @@ function borrarElementogama(){
     $.ajax (
         {
 
-            url          : 'http://localhost:8080/api/Gama/' + codigo,
+            url          : 'http://129.146.18.141:8080/api/Gama/' + codigo,
             type         : 'DELETE',
             contentType  : 'application/json',
             datatype     :  "JSON",
@@ -127,7 +127,7 @@ function consultarIdgama() {
     $.ajax (
                 {
 
-                    url          : 'http://localhost:8080/api/Gama/' + codigo ,
+                    url          : 'http://129.146.18.141:8080/api/Gama/' + codigo ,
                     type         : 'GET',
                     dataType     : 'json',
                     success:function(respuesta){
@@ -169,7 +169,7 @@ switch(accion){
 function traerInformacion(){
     $.ajax({
         
-        url:"http://localhost:8080/api/Car/all",
+        url:"http://129.146.18.141:8080/api/Car/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -209,7 +209,7 @@ function guardarInformacion(){
     $.ajax (
         {
 
-            url          : 'http://localhost:8080/api/Car/save',
+            url          : 'http://129.146.18.141:8080/api/Car/save',
             type         : 'POST',
             data         :  dataToSend,
             datatype     :  "JSON",
@@ -237,7 +237,7 @@ function editarInformacion() {
     $.ajax (
                 {
 
-                    url          : 'http://localhost:8080/api/Car/update',
+                    url          : 'http://129.146.18.141:8080/api/Car/update',
                     type         : 'PUT',
                     data         :  dataToSend,
                     datatype     :  "JSON",
@@ -262,7 +262,7 @@ function borrarElemento(idElemento){
     $.ajax (
         {
 
-            url          : 'http://localhost:8080/api/Car/' + codigo,
+            url          : 'http://129.146.18.141:8080/api/Car/' + codigo,
             type         : 'DELETE',
             datatype     :  "JSON",
             success      :  function(respuesta){
@@ -286,7 +286,7 @@ function consultarId() {
     $.ajax (
                 {
 
-                    url          : 'http://localhost:8080/api/Car/' + codigo ,
+                    url          : 'http://129.146.18.141:8080/api/Car/' + codigo ,
                     type         : 'GET',
                     dataType     : 'json',
                     success      :  function(respuesta){

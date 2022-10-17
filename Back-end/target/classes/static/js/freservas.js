@@ -14,7 +14,7 @@ switch(accion){
 function traerInformacion(formulario){
 $.ajax({
     
-    url:"http://localhost:8080/api/Reservation/all",
+    url:"http://129.146.18.141:8080/api/Reservation/all",
     type:"GET",
     datatype:"JSON",
     success:function(respuesta){
@@ -64,7 +64,7 @@ function guardarInformacion(){
     $.ajax (
         {
 
-            url          : 'http://localhost:8080/api/Reservation/save',
+            url          : 'http://129.146.18.141:8080/api/Reservation/save',
             type         : 'POST',
             data         :  dataToSend,
             datatype     :  "JSON",
@@ -90,7 +90,7 @@ function editarInformacion() {
     $.ajax (
                 {
 
-                    url          : 'http://localhost:8080/api/Reservation/update',
+                    url          : 'http://129.146.18.141:8080/api/Reservation/update',
                     type         : 'PUT',
                     data         :  dataToSend,
                     datatype     :  "JSON",
@@ -115,7 +115,7 @@ function borrarElemento(idElemento){
     $.ajax (
         {
 
-            url          : 'http://localhost:8080/api/Reservation/' + codigo,
+            url          : 'http://129.146.18.141:8080/api/Reservation/' + codigo,
             type         : 'DELETE',
             datatype     :  "JSON",
             success      :  function(respuesta){
@@ -139,7 +139,7 @@ function consultarId() {
     $.ajax (
                 {
 
-                    url          : 'http://localhost:8080/api/Reservation/' + codigo ,
+                    url          : 'http://129.146.18.141:8080/api/Reservation/' + codigo ,
                     type         : 'GET',
                     dataType     : 'json',
                     success      :  function(respuesta){
