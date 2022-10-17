@@ -13,10 +13,6 @@ public class RepositoryClient {
     @Autowired
     private RepositoryCrudClient repository;
 
-    public void deleteAll() {
-        repository.deleteAll();
-    }
-
     public List<Client> getAll() {
         return (List<Client>) repository.findAll();
     }

@@ -13,10 +13,6 @@ public class RepositoryGama {
     @Autowired
     private RepositoryCrudGama gamarepository;
 
-    public void deleteAll() {
-        gamarepository.deleteAll();
-    }
-
     public List<Gama> getAll() {
         return (List<Gama>) gamarepository.findAll();
     }

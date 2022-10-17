@@ -13,10 +13,6 @@ public class ServiceClient {
     @Autowired
     private RepositoryClient repository;
 
-    public void deleteAll() {
-        repository.deleteAll();
-    }
-
     public List<Client> getAll() {
         return repository.getAll();
     }

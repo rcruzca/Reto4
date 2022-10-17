@@ -51,13 +51,9 @@ public class ControllerGama {
     }
 
     @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public boolean deleteGama(@PathVariable("id") int id) {
         return service.deleteGama(id);
     }
 
-    @DeleteMapping("/all")
-    public List<Gama> deleteAll() {
-        service.deleteAll();
-        return service.getAll();
-    }
 }

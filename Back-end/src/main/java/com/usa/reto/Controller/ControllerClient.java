@@ -51,13 +51,9 @@ public class ControllerClient {
     }
 
     @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public boolean deleteClient(@PathVariable("id") int id) {
         return service.deleteClient(id);
     }
 
-    @DeleteMapping("/all")
-    public List<Client> deleteAll() {
-        service.deleteAll();
-        return service.getAll();
-    }
 }

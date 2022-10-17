@@ -64,9 +64,4 @@ public class ServiceCar {
         return d;
     }
 
-    public boolean deleteAll() {
-        repository.deleteAll();
-        return true;
-    }
-
 }

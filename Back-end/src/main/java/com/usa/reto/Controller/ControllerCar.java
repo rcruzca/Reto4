@@ -51,12 +51,9 @@ public class ControllerCar {
     }
 
     @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public boolean deleteCar(@PathVariable("id") int id) {
         return service.deleteCar(id);
     }
 
-    @DeleteMapping("/all")
-    public boolean deleteAll() {
-        return service.deleteAll();
-    }
 }
