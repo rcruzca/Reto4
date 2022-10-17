@@ -54,4 +54,9 @@ public class ControllerCar {
     public boolean deleteCar(@PathVariable("id") int id) {
         return service.deleteCar(id);
     }
+
+    @DeleteMapping("/all")
+    public void deleteAll() {
+        service.deleteAll();
+    }
 }

@@ -13,6 +13,10 @@ public class ServiceCar {
     @Autowired
     private RepositoryCar repository;
 
+    public void deleteAll() {
+        repository.deleteAll();
+    }
+
     public List<Car> getAll() {
         return repository.getAll();
     }

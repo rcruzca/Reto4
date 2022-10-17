@@ -54,4 +54,9 @@ public class ControllerClient {
     public boolean deleteClient(@PathVariable("id") int id) {
         return service.deleteClient(id);
     }
+
+    @DeleteMapping("/all")
+    public void deleteAll() {
+        service.deleteAll();
+    }
 }

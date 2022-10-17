@@ -54,4 +54,9 @@ public class ControllerGama {
     public boolean deleteGama(@PathVariable("id") int id) {
         return service.deleteGama(id);
     }
+
+    @DeleteMapping("/all")
+    public void deleteAll() {
+        service.deleteAll();
+    }
 }

@@ -13,6 +13,10 @@ public class ServiceGama {
     @Autowired
     private RepositoryGama repository;
 
+    public void deleteAll() {
+        repository.deleteAll();
+    }
+
     public List<Gama> getAll() {
         return repository.getAll();
     }
