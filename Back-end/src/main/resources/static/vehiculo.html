@@ -1,0 +1,145 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+	<title>Rent a Car</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="estilosR2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/fvehiculo.js"></script>
+    <script type="text/javascript" src="js/log.js"></script>
+</head>
+
+ <body>
+
+    <header>
+        <div class="caja">
+           <h1 class="logo">RENTaCAR</h1>
+           <nav>
+
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="vehiculo.html">Vehiculos</a></li>
+                <li><a href="cliente.html">Clientes</a></li>
+               <li><a href="reservas.html">Reservas</a></li>
+               <li><a href="mensajes.html">Mensajes</a></li>                  
+            </ul>
+           </nav>
+        </div>
+        <div class="authenticated" style="display:none;position:absolute;
+           right:1%;
+           top:10px;">
+            Logged in as: <span id="user"></span>
+            <div>
+              <button onClick="logout();location.href='/'" class="btn btn-primary">Logout</button>
+            </div>
+          </div>
+    </header>
+
+
+
+    <div><h1>Vehiculos</h1>
+        <label><input type="radio" name="accionCar" value="crear"  onClick=mostrarCar()>crear</label>
+        <label><input type="radio" name="accionCar" value="actualizar"  onClick=mostrarCar()>actualizar</label>
+        <label><input type="radio" name="accionCar" value="eliminar"  onClick=mostrarCar()>eliminar</label>
+        <label><input type="radio" name="accionCar" value="ctodos"  onClick=mostrarCar()>consultar todos</label>
+        <label><input type="radio" name="accionCar" value="ccodigo"  onClick=mostrarCar()>consulta por codigo</label>
+        
+        <div id="crearCar" style="display:none">
+            <div>
+                <input type="text" id="name" placeholder="nombre">
+                <input type="text" id="brand" placeholder="marca">
+                <input type="text" id="year" placeholder="modelo(año)">
+                <input type="text" id="description" placeholder="descripción">
+                <input type="text" id="gamaid" placeholder="codigo gama">
+            </div>
+            <button onclick="guardarInformacion()"> Insertar</button>
+        </div>
+        
+        <div id="actualizarCar" style="display:none">    
+            <div>
+                <input type="text" id="carIdUpdate" placeholder="codigo vehiculo">
+                <input type="text" id="nameUpdate" placeholder="nombre">
+                <input type="text" id="brandUpdate" placeholder="marca">
+                <input type="text" id="yearUpdate" placeholder="modelo(año)">
+                <input type="text" id="descriptionUpdate" placeholder="descripción">                
+            </div>
+            <button onclick="editarInformacion()"> Actualizar</button>
+        </div>
+        
+        <div id="eliminarCar" style="display:none">
+            <div>
+                <input type="text" id="carIdDelete" placeholder="codigo vehiculo" >
+            </div>
+            <button onclick="borrarElemento()"> eliminar por codigo</button>
+        </div>
+    
+    <div id="ccodigoCar" style="display:none">
+        <div>
+            <input type="text" id="carIdSearch" placeholder="codigo vehiculo" >
+        </div>
+        <button onclick="consultarId()"> Consultar por codigo</button>
+    </div>
+    </div>
+       
+       
+    
+       
+      
+         
+    
+
+    
+  
+
+<div><h1>Gama</h1>
+
+<label><input type="radio" name="accion" value="crear"  onClick=mostrargama()>crear</label>
+<label><input type="radio" name="accion" value="actualizar"  onClick=mostrargama()>actualizar</label>
+<label><input type="radio" name="accion" value="eliminar"  onClick=mostrargama()>eliminar</label>
+<label><input type="radio" name="accion" value="ctodos"  onClick=mostrargama()>consultar todos</label>
+<label><input type="radio" name="accion" value="ccodigo"  onClick=mostrargama()>consulta por codigo</label>
+   
+<div id="crear" style="display:none">
+    <div>
+        <input class="nombre" type="text" id="namegama" placeholder="nombre gama">
+        <input class="descripcion" type="text" id="descriptiongama" placeholder="descripción">
+    </div>
+    <button onclick="guardarInformaciongama()"> Insertar</button>
+</div>
+
+<div id="actualizar" style="display:none">    
+    <div>
+        <input type="text" id="gamaIdUpdate" placeholder="codigo gama" >
+        <input class="nombre" type="text" id="namegamaUpdate" placeholder="nombre gama">
+        <input class="descripcion" type="text" id="descriptiongamaUpdate" placeholder="descripción">
+    </div>
+    <button onclick="editarInformaciongama()"> Actualizar</button>
+</div>
+
+<div id="eliminar" style="display:none">
+    <div>
+        <input type="text" id="gamaIdDelete" placeholder="codigo gama" >
+    </div>
+    <button onclick="borrarElementogama()"> eliminar por codigo</button>
+</div>
+
+<div id="ccodigo" style="display:none">
+    <div>
+        <input type="text" id="gamaIdSearch" placeholder="codigo gama" >
+    </div>
+    <button onclick="consultarIdgama()"> Consultar por codigo</button>
+</div>
+</div>
+
+
+
+
+<div id="resultado">
+
+</div>
+
+
+ </body>
+ </html>

@@ -1,0 +1,65 @@
+﻿
+header {
+    background: #BBBBBB;
+    padding: 20px 0;
+}
+.logo{
+    color: #000000;
+    font-size: 30px;
+}
+.caja {
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+}
+nav {
+    position:absolute;
+    right:0;
+    top:10px;
+}
+nav li {
+    display: inline;
+    margin: 0 0 0 15px;
+       
+}
+nav a {
+    
+    color: #000000;
+    font-size: 22px;
+    text-decoration: none;
+}
+nav a:hover{
+    color: #c78c19;
+    text-decoration:underline;
+}
+footer {
+    background: #BBBBBB;
+    padding: 20px 0;
+    text-align:center;
+}
+
+.login{
+    width: 470px;
+    height:250px;
+    margin: 10% auto;
+}
+form label{
+    display:block;
+    margin:4px;
+}
+form li{
+    display:inline;
+    margin:0 0 0 15px;
+    
+}
+form input{
+    
+    margin:1%;
+}
+.informacion{
+    background: #c78c19;
+    width:50%;
+    padding:10px;
+    margin:0 0 5%;
+    font-weight: bold;
+}
