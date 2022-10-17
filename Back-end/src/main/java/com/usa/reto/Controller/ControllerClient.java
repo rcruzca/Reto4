@@ -56,7 +56,8 @@ public class ControllerClient {
     }
 
     @DeleteMapping("/all")
-    public void deleteAll() {
+    public List<Client> deleteAll() {
         service.deleteAll();
+        return service.getAll();
     }
 }

@@ -56,7 +56,8 @@ public class ControllerGama {
     }
 
     @DeleteMapping("/all")
-    public void deleteAll() {
+    public List<Gama> deleteAll() {
         service.deleteAll();
+        return service.getAll();
     }
 }
